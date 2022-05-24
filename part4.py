@@ -12,4 +12,19 @@ Define a function possibletriangle that takes 3 arguments (side1, side2, side3).
 '''
 
 def possibletriangle(side1, side2, side3): #do not change this line
-  pass #delete the word pass when you start writing your code
+  if int(side1) > int(side2) and int(side1) > int(side3):
+    greatest = int(side1) 
+  if int(side2) > int(side1) and int(side2) > int(side3):
+    greatest = int(side2)
+  if int(side3) > int(side2) and int(side3) > int(side1):
+    greatest = int(side3)
+  if greatest == int(side1):
+    others = int(side2) + int(side3)
+  if greatest == int(side2):
+    others = int(side1) + int(side3)
+  if greatest == int(side3):
+    others = int(side1) + int(side2)
+  if others > greatest:
+    return True
+  elif greatest >= others:
+    return False
